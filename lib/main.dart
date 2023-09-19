@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/presentation/screens/counters/counter_screed.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,11 +8,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
+  @override   
   Widget build(BuildContext context) {
     return const MaterialApp(
-        home: Scaffold(
-      body: Center(child: Text('ola ke ase xd')),
-    ));
+        debugShowCheckedModeBanner: false,
+        home: CounterScreen());
   }
 }
