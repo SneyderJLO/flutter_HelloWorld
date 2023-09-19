@@ -8,10 +8,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override   
+  @override     
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      
         debugShowCheckedModeBanner: false,
-        home: CounterScreen());
+        theme: ThemeData(
+          useMaterial3: true,
+          colorSchemeSeed: Colors.blueGrey //para establecer una paleta de colores a todo el sistema.
+
+        ),
+        home: const CounterScreen());
   }
 }
