@@ -28,8 +28,9 @@ class _CounterScreenState extends State<CounterScreen> {
              const Text('Counter application\nby: Neysser TL',textAlign: TextAlign.center, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Color.fromRGBO(13, 27, 42,0.7))),
               Text('$contadorClicks', style: 
                const TextStyle(fontSize: 120, fontWeight: FontWeight.w100, color: Color.fromRGBO(65, 90, 119, 0.5)),), 
-              const Text('Presiona el botón para incrementar el contador\n\n',style: 
-                TextStyle(fontSize: 12, fontWeight: FontWeight.w900)),
+             // Text(contadorClicks == 1 ? 'Click': 'Clicks',style: 
+              Text(validaClicks(contadorClicks),style: 
+                const TextStyle(fontSize: 12, fontWeight: FontWeight.w900)),
 ],
                   
           ),
@@ -66,7 +67,7 @@ class _CounterScreenState extends State<CounterScreen> {
             },
             child: const Icon(Icons.exposure_minus_1),
           ),
-         // SnackBarExample(),
+         // SnackBarExample(),ç
             const SizedBox(height: 15,),
           FloatingActionButton(
             onPressed: () {
@@ -97,6 +98,8 @@ class _CounterScreenState extends State<CounterScreen> {
     );
   }
 }
+
+String validaClicks(int contador) => (contador == 1 ? 'Clickaaaa' : 'Clicks');
 class SnackBarExample extends StatelessWidget {
   const SnackBarExample({super.key});
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/presentation/screens/counters/counter_screed.dart';
+import 'package:hello_world/presentation/screens/counters/counter_function_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
           colorSchemeSeed: Colors.blueGrey //para establecer una paleta de colores a todo el sistema.
 
         ),
-        home: const CounterScreen());
+        home: const CounterFunctionScreen()
+    );
   }
 }
